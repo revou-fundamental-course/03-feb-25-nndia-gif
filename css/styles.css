@@ -1,1 +1,94 @@
 /* Ini file CSS */
+
+body{
+    font-family: Verdana;
+}
+
+main{
+    max-width: 750px;
+    justify-self: center;
+
+    /* Background Matter */
+    background-color: lightsteelblue;
+    border-radius: 8px;
+}
+
+.main-header{
+    text-align: center;
+} 
+
+section{
+    padding: 8px;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    /* background-color: cornflowerblue; */
+    /* border-color: lightblue; */
+    
+}
+
+input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(38, 38, 105);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    font-size: 15px;
+    /* font-weight: bold; */
+}
+
+input[type="number"]:focus{
+    border: 3px solid ;
+}
+
+.output-group{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+}
+
+.main-result{
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.button-group{
+    margin-top: 5px;
+}
+
+.button{
+    padding: 8px;
+    border-radius: 4px;
+    padding-block: 5px;
+    padding-inline: 5px;
+    font-size: 17px;
+}
+
+.bg-blue{
+    background-color: lightskyblue;
+}
+
+.bg-green{
+    background-color: lightseagreen;
+}
+
+.bg-yellow{
+    background-color: lightyellow;
+}
+
+.remark{
+    font-weight: bold;
+    font-size: x-large;
+}
+
+footer{
+    text-align: center;
+}

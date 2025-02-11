@@ -5,17 +5,87 @@
     <meta charset="UTF-8">
     <!-- Tag untuk responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>    
+    <title>Website Kontrol Suhu</title>    
 
     <!-- Link CSS -->
-     <link rel="stylesheet" href="css\styles.css"
+     <link rel="stylesheet" href="css\styles.css">
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <h1 class="main-header">Konversi Suhu</h1>
+    </header>
 
-    <main></main>
+    <main>
+        <!-- Introduction -->
+        <section>
+            <p>Masukkan suhu derajat awal Celcius (&deg;C) atau Fahrenheit (&deg;F) atau Kelvin (&deg;K) ke kotak di bawah, lalu klik tombol konversi untuk mendapatkan hasil konversi dalam bentuk Celcius (&deg;C) atau Fahrenheit (&deg;F) atau Kelvin (&deg;K)</p>
+        </section>
 
-    <footer></footer>
+        <!-- Form Input Suhu Yang Ingin di Konversi -->
+         <section>
+            <form>
+                <div class="input-group">
+                    <!-- Pilihan Konversi Suhu Awal  -->
+                    <select id="input-unit" style="font-weight: bold;">
+                            <option>Celcius</option>
+                            <option>Fahrenheit</option>
+                            <option>Kelvin</option>
+                     </select>
+                    <input type="number" id="main-input">
+                </div>
+
+                <div class="button-group">
+                    <button class="bg-blue" onclick="convert(event)" id="main-result"><b>Konversi</b></button>
+                    <button class="bg-green"><b>Reset</b></button>
+                    <button class="bg-yellow"><b>Reserve</b></button>
+                </div>
+            </form>
+         </section>
+
+         <!-- Hasil Konversi  -->
+         <section>
+            <form>
+                <div class="output-group">
+                    <!-- Pilihan Konversi yg Dituju -->
+                    <select id="output-unit" style="font-weight: bold;">
+                        <option>Celcius</option>
+                        <option>Fahrenheit</option>
+                        <option>Kelvin</option>
+                    </select>
+                    <input type="text" id="main-result" readonly>
+                </div>
+            </form>
+        </section>
+
+        <!-- Cara Konversi Suhu -->
+         <section>
+            <div class="input-group">
+                <label for="how-result"><b>Cara Konversi:</b></label>
+                <input type="text" id="how-result" readonly>
+                <!-- <p style="color: darkblue;">Fahrenheit ke Celcius</p> -->
+            </div>
+         </section>
+
+         <!-- Penjelasan Rumus Konversi Suhu -->
+            <section>
+                <header>
+                    <h2>Cara Konversi dari Celcius (&deg;C) ke  (&deg;F)</h2>
+                <hr>
+
+                <article>
+                    <p>Suhu <span class="remark">S</span> dalam derajat Fahrenheit (&deg;F) samadengan suhu <span class="remark">S</span> dalam derajat Celcius (&deg;C) kali <span class="remark">9/5</span><span class="remark"> + 32.</span> </p>
+                    <p>S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> x 9/5) + 32</p>
+                    <p>atau</p>
+                    <p>S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> x 1.8) + 32</p>
+                </article>
+            </section>
+    </main>
+    
+    <footer>
+        <p>Made by Nndia@2025</p>
+    </footer>
+
+    <script src="js\script.js"></script>
 </body>
 </html>
