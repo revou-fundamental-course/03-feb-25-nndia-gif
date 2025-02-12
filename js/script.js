@@ -7,12 +7,6 @@ function convert(){
     var inputUnit = document.getElementById("input-unit").value;
     var outputUnit = document.getElementById("output-unit").value;
     
-    // if (inputValue === "") {
-    //     document.getElementById("error-message").style.display = "inline";
-    //     return;
-    // } else{
-    //     document.getElementById("error-message").style.display = "none";
-    // }
 
     if (isNaN(inputValue)){
         alert("Masukkan angka yang valid!");
