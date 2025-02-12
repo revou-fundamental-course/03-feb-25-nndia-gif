@@ -5,17 +5,222 @@
     <meta charset="UTF-8">
     <!-- Tag untuk responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>    
+    <title>Website Kontrol Suhu</title>    
 
     <!-- Link CSS -->
-     <link rel="stylesheet" href="css\styles.css"
+     <link rel="stylesheet" href="css\styles.css">
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <h1 class="main-header">Konversi Suhu</h1>
+    </header>
 
-    <main></main>
+    <main>
+        <!-- Introduction -->
+        <section>
+            <p>Pilihlah suhu awal (Celcius (&deg;C), Reamur (&deg;R), Fahrenheit (&deg;F), Kelvin (&deg;K)) yang akan dikonversi, lalu masukkan nilai suhunya.</p>
+            <p>Pilihlah suhu yang dituju (Celcius (&deg;C), Reamur (&deg;R), Fahrenheit (&deg;F), Kelvin (&deg;K)), dan terakhir klik tombol Konversi untuk mendapatkan hasil konversi suhu yang dituju.</p>
+        </section>
 
-    <footer></footer>
+        <!-- Form Input Suhu Yang Ingin di Konversi -->
+         <section>
+            <form>
+                <div class="input-group">
+                    <!-- Pilihan Konversi Suhu Awal  -->
+                    <select id="input-unit" style="font-weight: bold;">
+                            <option>Celcius</option>
+                            <option>Reamur</option>
+                            <option>Fahrenheit</option>
+                            <option>Kelvin</option>
+                     </select>
+                    <input type="number" id="main-input">
+                </div>
+
+                <div class="button-group">
+                    <button type="button" class="bg-blue" onclick="convert()" id="result"><b>Konversi</b></button>
+                    <button type="reset" class="bg-green"><b>Reset</b></button>
+                    <button type="button" class="bg-yellow"><b>Reserve</b></button>
+                </div>
+            </form>
+         </section>
+
+         <!-- Hasil Konversi  -->
+         <section>
+                <div class="input-group">
+                    <!-- Pilihan Konversi yg Dituju -->
+                    <select id="output-unit" style="font-weight: bold;">
+                        <option>Celcius</option>
+                        <option>Reamur</option>
+                        <option>Fahrenheit</option>
+                        <option>Kelvin</option>
+                    </select>
+                    <input type="text" id="main-result" readonly>
+                </div>
+        </section>
+
+        <!-- Cara Konversi Suhu -->
+         <section>
+            <div class="input-group">
+                <label for="how-result"><b>Cara Konversi:</b></label>
+                <input type="text" id="how-result" readonly>
+            </div>
+         </section>
+
+         <!-- Penjelasan Rumus Konversi Suhu -->
+        <section>
+            <header>
+                <hr>
+                <h4>Cara Konversi dari Celcius (&deg;C) ke  Reamur (&deg;R)</h4>
+                <hr>
+
+                <article>
+                    <p>Suhu <span class="remark">S</span> dalam derajat Reamur (&deg;R) samadengan suhu <span class="remark">S</span> dalam derajat Celcius (&deg;C) kali <b>4/5</b></p>
+                    <p>S<sub>(&deg;R)</sub> = S<sub>(&deg;C)</sub> x 4/5</p>
+                    <p>atau</p>
+                    <p>S<sub>(&deg;R)</sub> = S<sub>(&deg;C)</sub> x 0.8</p>
+                </article>
+                <hr>
+        </section>
+
+        <section>
+            <header>
+                <hr>
+                <h4>Cara Konversi dari Celcius (&deg;C) ke  Fahrenheit (&deg;F)</h4>
+                <hr>
+
+                <article>
+                    <p>Suhu <span class="remark">S</span> dalam derajat Fahrenheit (&deg;F) samadengan suhu <span class="remark">S</span> dalam derajat Celcius (&deg;C) kali <b>9/5 tambah 32.</b></p>
+                    <p>S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> x 9/5) + 32</p>
+                    <p>atau</p>
+                    <p>S<sub>(&deg;R)</sub> = (S<sub>(&deg;C)</sub> x 1.8) + 32</p>
+                </article>
+                <hr>
+        </section>
+
+        <section>
+            <header>
+                <hr>
+                <h4>Cara Konversi dari Celcius (&deg;C) ke  Kelvin (&deg;K)</h4>
+                <hr>
+
+                <article>
+                    <p>Suhu <span class="remark">S</span> dalam derajat Kelvin (&deg;K) samadengan suhu <span class="remark">S</span> dalam derajat Celcius (&deg;C) <b>ditambah 273.15</b></p>
+                    <p>S<sub>(&deg;K)</sub> = S<sub>(&deg;C)</sub> + 273.15</p>
+                </article>
+                <hr>
+        </section>
+
+        <section>
+            <header>
+                <hr>
+                <h4>Cara Konversi dari Reamur (&deg;R) ke  Celcius (&deg;C)</h4>
+                <hr>
+
+                <article>
+                    <p>Suhu <span class="remark">S</span> dalam derajat Celcius (&deg;R) samadengan suhu <span class="remark">S</span> dalam derajat Reamur (&deg;R) <b>dikali 5/4</b></p>
+                    <p>S<sub>(&deg;K)</sub> = S<sub>(&deg;C)</sub> x 5/4</p>
+                    <p>atau</p>
+                    <p>S<sub>(&deg;R)</sub> = S<sub>(&deg;C)</sub> x 1.25</p>
+                </article>
+                <hr>
+        </section>
+
+        <section>
+            <header>
+                <hr>
+                <h4>Cara Konversi dari Reamur (&deg;R) ke  Fahrenheit (&deg;F)</h4>
+                <hr>
+
+                <article>
+                    <p>Suhu <span class="remark">S</span> dalam derajat Reamur (&deg;R) samadengan suhu <span class="remark">S</span> dalam derajat Fahrenheit (&deg;F) <b>dikali 9/4 ditambah 32</b></p>
+                    <p>S<sub>(&deg;R)</sub> = (S<sub>(&deg;R)</sub> x 9/4) + 32</p>
+                    <p>atau</p>
+                    <p>S<sub>(&deg;R)</sub> = (S<sub>(&deg;C)</sub> x 2.25) + 32</p>
+                </article>
+                <hr>
+        </section>
+
+        <section>
+            <header>
+                <hr>
+                <h4>Cara Konversi dari Reamur (&deg;R) ke Kelvin (&deg;K)</h4>
+                <hr>
+
+                <article>
+                    <p>Suhu <span class="remark">S</span> dalam derajat Kelvin (&deg;K) samadengan suhu <span class="remark">S</span> dalam derajat Reamur (&deg;R) <b>dikali 5/4 ditambah 273.15</b></p>
+                    <p>S<sub>(&deg;R)</sub> = (S<sub>(&deg;R)</sub> x 5/4) + 273.15</p>
+                    <p>atau</p>
+                    <p>S<sub>(&deg;R)</sub> = (S<sub>(&deg;C)</sub> x 1.25) + 273.15</p>
+                </article>
+                <hr>
+        </section>
+
+        <section>
+            <header>
+                <hr>
+                <h4>Cara Konversi dari Kelvin (&deg;K) ke Celcius (&deg;C)</h4>
+                <hr>
+
+                <article>
+                    <p>Suhu <span class="remark">S</span> dalam derajat Celcius (&deg;C) samadengan suhu <span class="remark">S</span> dalam derajat Kelvin (&deg;K) <b>dikurangi 273.15</b></p>
+                    <p>S<sub>(&deg;C)</sub> = S<sub>(&deg;R)</sub> - 273.15</p>
+                    <p>atau</p>
+                    <p>S<sub>(&deg;C)</sub> = (S<sub>(&deg;C)</sub> - 273.15</p>
+                </article>
+                <hr>
+        </section>
+
+        <section>
+            <header>
+                <hr>
+                <h4>Cara Konversi dari Kelvin (&deg;K) ke Fahrenheit (&deg;F)</h4>
+                <hr>
+
+                <article>
+                    <p>Suhu <span class="remark">S</span> dalam derajat Fahrenheit (&deg;F) samadengan suhu <span class="remark">S</span> dalam derajat Kelvin (&deg;K) <b>dikurangi 273.15, dikali 9/5, ditambah 32</b></p>
+                    <p>S<sub>(&deg;F)</sub> = ((S<sub>(&deg;R)</sub> - 273.15) x 9/5) + 32</p>
+                    <p>atau</p>
+                    <p>S<sub>(&deg;F)</sub> = ((S<sub>(&deg;C)</sub> - 273.15) x 1.8) + 32</p>
+                </article>
+                <hr>
+        </section>
+
+        <section>
+            <header>
+                <hr>
+                <h4>Cara Konversi dari Kelvin (&deg;K) ke Fahrenheit (&deg;F)</h4>
+                <hr>
+
+                <article>
+                    <p>Suhu <span class="remark">S</span> dalam derajat Fahrenheit (&deg;F) samadengan suhu <span class="remark">S</span> dalam derajat Kelvin (&deg;K) <b>dikurangi 273.15, dikali 9/5, ditambah 32</b></p>
+                    <p>S<sub>(&deg;F)</sub> = ((S<sub>(&deg;R)</sub> - 273.15) x 9/5) + 32</p>
+                    <p>atau</p>
+                    <p>S<sub>(&deg;F)</sub> = ((S<sub>(&deg;C)</sub> - 273.15) x 1.8) + 32</p>
+                </article>
+                <hr>
+        </section>
+
+        <section>
+            <header>
+                <hr>
+                <h4>Cara Konversi dari Kelvin (&deg;K) ke  Reamur (&deg;R)</h4>
+                <hr>
+
+                <article>
+                    <p>Suhu <span class="remark">S</span> dalam derajat Reamur (&deg;R) samadengan suhu <span class="remark">S</span> dalam derajat Kelvin (&deg;K) <b> dikurangi 273.15, dikali 4/5</b></p>
+                    <p>S<sub>(&deg;R)</sub> = (S<sub>(&deg;C)</sub> - 273.15) x 4/5</p>
+                    <p>atau</p>
+                    <p>S<sub>(&deg;R)</sub> = (S<sub>(&deg;C)</sub> - 273.15 ) x 0.8</p>
+                </article>
+                <hr>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Made by Nndia@2025</p>
+    </footer>
+
+    <script src="js\script.js"></script>
 </body>
 </html>
