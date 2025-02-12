@@ -6,6 +6,19 @@ function convert(){
     var inputValue = parseFloat(document.getElementById("main-input").value);
     var inputUnit = document.getElementById("input-unit").value;
     var outputUnit = document.getElementById("output-unit").value;
+    
+    // if (inputValue === "") {
+    //     document.getElementById("error-message").style.display = "inline";
+    //     return;
+    // } else{
+    //     document.getElementById("error-message").style.display = "none";
+    // }
+
+    if (isNaN(inputValue)){
+        alert("Masukkan angka yang valid!");
+        return;
+    }
+
     var result = 0;
     // var mainResult = document.getElementById("main-result").value;
     var formula = " ";
@@ -74,7 +87,8 @@ function convert(){
             formula = "(" + inputValue + "\u00B0K - 273.15) * 9/5 + 32";
         }
     }
-
+    //Menampilkan hasil di page yang sama
     document.getElementById("main-result").value = result;
+    //Menampilkan rumus di page yang sama
     document.getElementById("how-result").value = formula;
 }

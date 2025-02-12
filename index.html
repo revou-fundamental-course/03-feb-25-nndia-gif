@@ -28,13 +28,14 @@
             <form>
                 <div class="input-group">
                     <!-- Pilihan Konversi Suhu Awal  -->
-                    <select id="input-unit" style="font-weight: bold;">
+                    <select id="input-unit" class="input-unit" style="font-weight: bold;">
                             <option>Celcius</option>
                             <option>Reamur</option>
                             <option>Fahrenheit</option>
                             <option>Kelvin</option>
                      </select>
-                    <input type="number" id="main-input">
+                    <input type="number" id="main-input" required placeholder="Masukkan suhu">
+                    <!-- <span id="error-msg">Masukkan suhu yang valid</span> -->
                 </div>
 
                 <div class="button-group">
@@ -49,7 +50,7 @@
          <section>
                 <div class="input-group">
                     <!-- Pilihan Konversi yg Dituju -->
-                    <select id="output-unit" style="font-weight: bold;">
+                    <select id="output-unit" class="input-unit" style="font-weight: bold;">
                         <option>Celcius</option>
                         <option>Reamur</option>
                         <option>Fahrenheit</option>
@@ -62,7 +63,7 @@
         <!-- Cara Konversi Suhu -->
          <section>
             <div class="input-group">
-                <label for="how-result"><b>Cara Konversi:</b></label>
+                <label for="how-result" class="how-convert"><b>Cara Konversi:</b></label>
                 <input type="text" id="how-result" readonly>
             </div>
          </section>
