@@ -5,11 +5,11 @@ body{
 }
 
 main{
-    max-width: 750px;
+    max-width: 1000px ;
     justify-self: center;
 
     /* Background Matter */
-    background-color: lightsteelblue;
+    background-color: rgb(171, 174, 241);
     border-radius: 8px;
 }
 
@@ -25,9 +25,6 @@ section{
     display: flex;
     flex-direction: column;
     font-size: 15px;
-    /* background-color: cornflowerblue; */
-    /* border-color: lightblue; */
-    
 }
 
 input{
@@ -39,8 +36,8 @@ input{
     -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
-    font-size: 15px;
-    /* font-weight: bold; */
+    font-size: 20px;
+    font-weight: bold;
 }
 
 input[type="number"]:focus{
@@ -49,7 +46,7 @@ input[type="number"]:focus{
 
 .input-unit{
     font-weight: bold;
-    background: cornflowerblue;
+    background: rgb(158, 150, 243);
     display: flex;
     flex-direction: column;
     font-size: 16px;
@@ -74,9 +71,11 @@ input[type="number"]:focus{
 }
 
 .how-convert{
-    background: cornflowerblue;
+    background: rgb(158, 150, 243);
     font-size: 16px;
     margin-top: 0px;
+    font-family: Arial;
+    font-weight: bold;
 }
 
 .button-group{
@@ -91,18 +90,20 @@ input[type="number"]:focus{
     padding-inline: 5px;
 }
 
+.bg-purple{
+    background-color: rgb(77, 85, 202);
+    font-size: 16px;
+    color: white;
+}
+
+.bg-red{
+    background-color: rgb(227, 84, 84);
+    font-size: 16px;
+    color: white;
+}
+
 .bg-blue{
-    background-color: lightskyblue;
-    font-size: 16px;
-}
-
-.bg-green{
-    background-color: lightseagreen;
-    font-size: 16px;
-}
-
-.bg-yellow{
-    background-color: deepskyblue ;
+    background-color: rgba(85, 181, 212, 0.705) ;
     font-size: 16px;
 }
 
