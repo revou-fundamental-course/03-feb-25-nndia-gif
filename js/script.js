@@ -7,14 +7,19 @@ function convert(){
     var inputUnit = document.getElementById("input-unit").value;
     var outputUnit = document.getElementById("output-unit").value;
     
+    //Pilihan konversi suhu tidak boleh sama
+    if (inputUnit === outputUnit){
+        alert("Pilihlah Konversi Suhu yang berbeda!");
+        return;
+    }
 
+    //Nilai input suhu tidak boleh kosong
     if (isNaN(inputValue)){
         alert("Masukkan angka yang valid!");
         return;
     }
 
     var result = 0;
-    // var mainResult = document.getElementById("main-result").value;
     var formula = " ";
 
     // Konversi Celcius
